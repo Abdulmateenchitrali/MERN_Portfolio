@@ -1,0 +1,76 @@
+{{>header}}
+<!--main header-->
+<div class="contianer main_header">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="main-content">
+        <form class="temp_form" name="myForm">
+          <input type="text" name="city" id="cityName" placeholder="Enter your City Name" autocomplete="off">
+          <input type="submit" value="Search" id="submitBtn">
+        </form>
+      </div>
+      <div class="tempInformation">
+        <div class="top_layer">
+          <p id="day">Tuesday</p>
+          <p id="data">13 &nbsp; OCT</p>
+        </div>
+        <div class="main_layer">
+          <p id="city_name">Get data here</p>
+          <div class="middle_layer data_hide">
+            <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
+            <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{>footer}}
+<script>
+  const getCurrentDate = () => {
+
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thusday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    let getCurrentTime = new Date();
+    let days = weekday[getCurrentTime.getDay()];
+    let day = document.getElementById('day');
+    day.innerText = days;
+  };
+  getCurrentDate();
+
+  const getCurrentTime = () => {
+    let data=document.getElementById('data');
+    var currentTime = new Date();
+    var month = new Array();
+    month[0] = "Jan";
+    month[1] = "Feb";
+    month[2] = "Mar";
+    month[3] = "Apr";
+    month[4] = "May";
+    month[5] = "Jun";
+    month[6] = "Jul";
+    month[7] = "Aug";
+    month[8] = "Sep";
+    month[9] = "Oct";
+    month[10] = "Nov";
+    month[11] = "Dec";
+    var months = month[currentTime.getMonth()];
+    var date = currentTime.getDate();
+    data.innerText=`${months}   ${date}`;   
+    
+  }
+  getCurrentTime();
+  
+
+
+
+
+
+</script>
+<script src="js/main.js"></script>
