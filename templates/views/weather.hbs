@@ -1,6 +1,10 @@
 {{>header}}
+<video playsinline autoplay muted loop poster="image/sky.jpg" id="bgvid">
+  <source src="video/vrm-world.webm" type="video/webm">
+  <source src="video/vrm-world.mp4" type="video/mp4">
+</video>
 <!--main header-->
-<div class="contianer main_header">
+<div class="contianer main_header res-bg">
   <div class="row">
     <div class="col-md-10 col-12 mx-auto">
       <div class="main-content">
@@ -45,7 +49,7 @@
   getCurrentDate();
 
   const getCurrentTime = () => {
-    let data=document.getElementById('data');
+    let data = document.getElementById('data');
     var currentTime = new Date();
     var month = new Array();
     month[0] = "Jan";
@@ -62,15 +66,10 @@
     month[11] = "Dec";
     var months = month[currentTime.getMonth()];
     var date = currentTime.getDate();
-    data.innerText=`${months}   ${date}`;   
-    
+    data.innerText = `${months}   ${date}`;
+
   }
   getCurrentTime();
-  
-
-
-
-
 
 </script>
 <script src="js/main.js"></script>

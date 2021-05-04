@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;800&display=swap');
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 7rem;
+  left: 0;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -327,7 +336,6 @@ footer p{
     }
   }
   
-
 
 
 
